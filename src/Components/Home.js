@@ -65,13 +65,18 @@ export default function Home({database}) {
       });
     })
   };
-
+  const filterDocs = (doc)=>{
+    return doc.filter((document)=>{
+      return document.author==userEmail;
+    })
+  }
   useEffect(()=>{
     onSnapshot(databaseCollection,(res)=>{
-      setDocsData(res.docs.map((doc)=>{
+      setDocsData(filterDocs(res.docs.map((doc)=>{
         return {...doc.data(), id: doc.id}
-      }))
-    })
+      })))
+    });
+
   },[])
 
   const openEditor = (id) => {

@@ -49,6 +49,29 @@ export default function Editor({database}) {
         })
     },[])
 
+    const modules = {
+        toolbar: [
+          [{ header: [1, 2, 3, 4, 5, 6, false] }],
+          ['bold', 'italic', 'underline', 'strike'],
+          ['link', 'image', 'video'],
+          [{ list: 'ordered' }, { list: 'bullet' }],
+          ['clean'],
+        ],
+      };
+  
+      const formats = [
+        'header',
+        'bold',
+        'italic',
+        'underline',
+        'strike',
+        'link',
+        'image',
+        'video',
+        'list',
+        'bullet',
+      ];
+
     return (
     <div>
         <ToastContainer/>
@@ -58,8 +81,16 @@ export default function Editor({database}) {
             onClick={()=> navigate('/home')}>Back</button>
         </div>
         <h3>{title}</h3>
-      <ReactQuill value={editorData} 
-      onChange={getEditorData}/>
+        <div className='editorPage'>
+
+      <ReactQuill 
+        value={editorData} 
+        onChange={getEditorData}
+        modules={modules}
+        formats={formats}
+        theme="snow"
+        />
+        </div>
     </div>
   )
 }
