@@ -49,7 +49,9 @@ export default function Home({database}) {
   const addDocument = () => {
     console.log(title);
     if(title[0]===' '){
-      alert("Error. Don't provide spaces in starting!");
+      toast.error("Error. Don't provide spaces in starting!",{
+        autoClose: 1000
+      });
       return;
     }
     addDoc(databaseCollection,{
