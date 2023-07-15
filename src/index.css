@@ -124,16 +124,22 @@ code {
 }
 
 .heading-top{
-  height: 70px;
+  height: 60px;
   display: flex;
-  justify-content: center;
+  /* justify-content: center; */
+  /* margin-left: 1rem; */
   align-items: center;
   background-color: rgb(70, 154, 154);
   box-sizing: border-box;
   color: white;
   /* margin: 0px; */
+  border-color: rgb(255, 255, 255);
+    /* border-bottom: 1px solid;  */
+    box-shadow: rgba(0, 0, 0, 0.44) 0px 3px 8px;
 }
-
+.heading-top h2{
+  margin-left: 1rem;
+}
 .editorPage{
   margin: 0px 100px 0px 100px;
   height: auto;
