@@ -48,7 +48,7 @@ export default function Home({database}) {
 
   const addDocument = () => {
     console.log(title);
-    if(title[0]===' '){
+    if(title[0]===' ' || title==''){
       toast.error("Error. Don't provide spaces in starting!",{
         autoClose: 1000
       });
