@@ -48,6 +48,10 @@ export default function Home({database}) {
 
   const addDocument = () => {
     console.log(title);
+    if(title[0]===' '){
+      alert("Error. Don't provide spaces in starting!");
+      return;
+    }
     addDoc(databaseCollection,{
       title : title,
       author: userEmail,
