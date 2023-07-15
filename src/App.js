@@ -8,7 +8,7 @@ import Editor from './Components/Editor';
 export default function App(){
   return (
     <div className="App">
-      <div className="heading-top"><h2>Light Editor</h2></div>
+      <div className="heading-top"><h1 style={{fontFamily: 'Dancing Script'}}>Light Editor</h1></div>
       <Routes>
         <Route path='/' element={<Login/>}/>
         <Route exact path='/home' element={<Home database = {database}/>}/>
